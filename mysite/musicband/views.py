@@ -8,22 +8,31 @@ from django.template import loader
 
 # Create your views here.
 def index(request):
+    """Function loads 'home' html page from template folder."""
     return render(request, "musicband/home.html")
 
 
 def about(request):
+    """Function loads 'about' html page from template folder."""
     return render(request, "musicband/about.html")
 
 
 @login_required(login_url="/user_auth/login")
 def records(request):
-    # return HttpResponse("Hello world. You're at the  index.")
+    """Function loads 'record' html page from template folder, the page is populated with records from the database.
+    Records are presented by date. "@login_required" Decorator for views (login_required function from user_auth app)
+    checks that the user is logged in, redirecting to the log-in page if necessary.
+
+         :return: 'records' html page with dictionary of records
+
+    """
     latest_record_list = Music.objects.order_by('-pub_date')[:5]
     context = {'latest_record_list': latest_record_list}
     return render(request, "musicband/records.html", context)
 
 
 def musicband(request):
+    """Function loads and return 'home' html page from template folder"""
     template = loader.get_template('musicband/home.html')
     return HttpResponse(template.render())
 
