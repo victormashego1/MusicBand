@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row center">
+        <div class="col-md-6 offset-md-3">
+            <h1 style="margin-top:20px;"> Welcome, {{username}} </h1>
+
+ <p style="font-size: 20px;margin-top:10px;">See available polls <a class="btn btn-primary"  role="button" href="{% url 'polls:polls' %}">Click Here</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

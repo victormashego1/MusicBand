@@ -1,0 +1,52 @@
+{% extends "index.html" %} {% block content %}
+<style>
+  .test {
+    margin: 0;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    position: absolute;
+
+  }
+</style>
+<div class="test">
+<div class="container">
+  <div class="row "  style="margin-top: 25px">
+    <h1>The Best of Julian Taylor</h1>
+    <ul class="list-group ">
+      {% for music in latest_record_list %}
+
+      <li class="list-group">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="/media/{{music.image}}"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{music.title}}</h5>
+                <p class="card-text">{{music.author}}</p>
+                <p class="card-text">{{music.pub_date}}</p>
+
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <small class="text-body-secondary"
+                    >HyperionDev Records
+                  </small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+  </div>
+{% endblock %}

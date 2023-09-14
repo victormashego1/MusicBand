@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+{% block content %}
+
+   <style>
+     .carousel-inner img {
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+}
+
+.carousel-caption h3 {
+  color: #fff !important;
+}
+
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+     </style>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/404095/da57120e96f412f4f961628596bd6ed0c8d64d88/original/2b4a2210-copy-2.jpg/!!/b%3AW1sicmVzaXplIiwxODAwXSxbIm1heCJdLFsid2UiXV0%3D/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg" alt="http link">
+      <div class="carousel-caption">
+        <h1>Julian Taylor</h1>
+        <h2>Wellcome.....</h2>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+</div>
+{% endblock %}

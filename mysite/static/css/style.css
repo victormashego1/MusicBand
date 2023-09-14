@@ -1,0 +1,33 @@
+body {
+    background-color: lightblue;
+    margin: 20px;
+    font-family: verdana;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+
+  h2 {
+    color: mediumslateblue;
+  }
+  
+  p {
+    
+    font-size: 20px;
+    text-align: justify;
+    color: dimgrey;
+
+
+  }
+  table, tbody {
+    border: 1px solid;
+    table-layout: auto;
+  }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
